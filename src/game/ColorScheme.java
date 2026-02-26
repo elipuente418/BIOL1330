@@ -43,22 +43,22 @@ public class ColorScheme {
 
 	private void initImages() {
 		image.put(0,		null);
-		image.put(2,		catchException("C:/Users/epuen/OneDrive/Desktop/BIOL1330/2048/2048-JAVA/src/game/2048 Icons/Spermicide.png"));
-		image.put(4,		catchException("C:/Users/epuen/OneDrive/Desktop/BIOL1330/2048/2048-JAVA/src/game/2048 Icons/fertility-awarenessBasedMethods.png"));
-		image.put(8,		catchException("C:/Users/epuen/OneDrive/Desktop/BIOL1330/2048/2048-JAVA/src/game/2048 Icons/Withdrawl.png"));
-		image.put(16,		catchException("C:/Users/epuen/OneDrive/Desktop/BIOL1330/2048/2048-JAVA/src/game/2048 Icons/femaleCondom.png"));
-		image.put(32,		catchException("C:/Users/epuen/OneDrive/Desktop/BIOL1330/2048/2048-JAVA/src/game/2048 Icons/maleCondom.png"));
-		image.put(64,		catchException("C:/Users/epuen/OneDrive/Desktop/BIOL1330/2048/2048-JAVA/src/game/2048 Icons/Ring.png"));
-		image.put(128,		catchException("C:/Users/epuen/OneDrive/Desktop/BIOL1330/2048/2048-JAVA/src/game/2048 Icons/Patch.png"));
-		image.put(256,		catchException("C:/Users/epuen/OneDrive/Desktop/BIOL1330/2048/2048-JAVA/src/game/2048 Icons/Pill.png"));
-		image.put(512,		catchException("C:/Users/epuen/OneDrive/Desktop/BIOL1330/2048/2048-JAVA/src/game/2048 Icons/Injectable.png"));
-		image.put(1024, 	catchException("C:/Users/epuen/OneDrive/Desktop/BIOL1330/2048/2048-JAVA/src/game/2048 Icons/IUD.png"));
-		image.put(2048, 	catchException("C:/Users/epuen/OneDrive/Desktop/BIOL1330/2048/2048-JAVA/src/game/2048 Icons/Implant.png"));
+		image.put(2,		catchException("/game/2048 Icons/Spermicide.png"));
+		image.put(4,		catchException("/game/2048 Icons/fertility-awarenessBasedMethods.png"));
+		image.put(8,		catchException("/game/2048 Icons/Withdrawl.png"));
+		image.put(16,		catchException("/game/2048 Icons/femaleCondom.png"));
+		image.put(32,		catchException("/game/2048 Icons/maleCondom.png"));
+		image.put(64,		catchException("/game/2048 Icons/Ring.png"));
+		image.put(128,		catchException("/game/2048 Icons/Patch.png"));
+		image.put(256,		catchException("/game/2048 Icons/Pill.png"));
+		image.put(512,		catchException("/game/2048 Icons/Injectable.png"));
+		image.put(1024, 	catchException("/game/2048 Icons/IUD.png"));
+		image.put(2048, 	catchException("/game/2048 Icons/Implant.png"));
 	}
 
 	private BufferedImage catchException(String file) {
 		try {
-			exceptionImage = ImageIO.read(new File(file));
+			exceptionImage = ImageIO.read(getClass().getResource(file));
 			if (exceptionImage != null) {
 				System.out.println("Image successfully loaded into BufferedImage.");
 				// You can now use the bufferedImage object for further manipulation (e.g., get width, height, pixel data)

@@ -22,7 +22,7 @@ public class Grid extends JPanel {
 
 	private void drawImage(Graphics2D g) {
 		try {
-			graphicImage = ImageIO.read(new File("C:/Users/epuen/OneDrive/Desktop/BIOL1330/2048/2048-JAVA/src/game/graphicKey.png"));
+			graphicImage = ImageIO.read(getClass().getResource("/game/graphicKey.png"));
 			if (graphicImage != null) {
 				System.out.println("Image successfully loaded into BufferedImage.");
 				// You can now use the bufferedImage object for further manipulation (e.g., get width, height, pixel data)

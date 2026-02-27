@@ -1,4 +1,4 @@
-FROM eclipse-temurin
-COPY target/BIOL1330JAR.jar app.jar
+FROM amazoncorretto
+COPY target/my-app.jar app.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/BIOL1330JAR.jar"]
+ENTRYPOINT ["java","-jar","/app.jar"]

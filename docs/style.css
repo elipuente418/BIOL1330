@@ -1,6 +1,6 @@
 #page {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 40px;
 }
 
 body {
@@ -23,44 +24,42 @@ body {
     align-items: flex-start;
     gap: 40px;
     width: 100%;
-    margin: 60px auto 0 auto;
+    margin: 80px auto 0 auto;
 }
 
 #title {
     color: #776E65;
     font-size: 38px;
-    margin-bottom: 10px;
 }
 
 #score-box {
-    right: 10;
-    top: 10;
     background: #BBADA0;
-    width: 100px;
-    height: 60px;
+    width: 120px;
+    height: 70px;
     border-radius: 25px;
     text-align: center;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #score-label {
-    font-size: 20px;
-    margin-top: 5px;
+    font-size: 16px;
 }
 
 #score-value {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
 }
 
 #gameCanvas {
-    margin-top: 60px;
     border-radius: 15px;
     background: #BBADA0;
 }
 
 #graphicKey {
-    width: 700px;
+    width: 900px;   /* increase size here */
     height: auto;
     max-width: none;
 }

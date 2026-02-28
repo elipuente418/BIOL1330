@@ -56,7 +56,7 @@ body {
 #gameCanvas {
     border-radius: 10px;
     background: #BBADA0;
-    margin-top: 0;
+    margin: 0;
 }
 
 #graphicKey {

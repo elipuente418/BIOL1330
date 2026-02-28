@@ -91,24 +91,18 @@ function addRandomTile() {
 }
 
 function slide(row) {
-    let original = row.slice();
-
     row = row.filter(v => v !== 0);
-
-    for (let i = 0; i < row.length - 1; i++) {
-        if (row[i] === row[i + 1]) {
+    for (let i=0; i<row.length-1; i++) {
+        if (row[i] === row[i+1]) {
             row[i] *= 2;
             score += row[i];
-            row[i + 1] = 0;
+            row[i+1] = 0;
         }
     }
-
     row = row.filter(v => v !== 0);
     while (row.length < 4) row.push(0);
-
-    return { row, changed: JSON.stringify(row) !== JSON.stringify(original) };
+    return row;
 }
-
 
 function moveLeft() {
     let changed = false;

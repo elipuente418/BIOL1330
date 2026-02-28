@@ -7,21 +7,27 @@
 </head>
 <body>
 
-<div id="game-container">
-    <h1 id="title">2048</h1>
+<div id="page">
 
-    <div id="score-box">
-        <div id="score-label">SCORE</div>
-        <div id="score-value">0</div>
+    <div id="header">
+        <h1 id="title">2048</h1>
+
+        <div id="score-box">
+            <div id="score-label">SCORE</div>
+            <div id="score-value">0</div>
+        </div>
     </div>
 
-    <div id="game-area">
-        <canvas id="gameCanvas" width="555" height="555"></canvas>
-    </div>
+    <div id="game-container">
+        <div id="game-area">
+            <canvas id="gameCanvas" width="555" height="555"></canvas>
+        </div>
 
-    <img id="graphicKey" src="assets/graphicKey.png">
+        <img id="graphicKey" src="assets/graphicKey.png">
+    </div>
 
 </div>
+
 
 <script src="game.js"></script>
 </body>

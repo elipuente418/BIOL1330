@@ -53,12 +53,12 @@ body {
 }
 
 #gameCanvas {
-    border-radius: 15px;
+    border-radius: 10px;
     background: #BBADA0;
 }
 
 #graphicKey {
-    width: 800px;
+    width: 750px;
     height: auto;
     max-width: none;
 }

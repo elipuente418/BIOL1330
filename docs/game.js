@@ -164,27 +164,28 @@ function hasMoves() {
     return false;
 }
 
+
 document.addEventListener("keydown", e => {
-    let moved = false;
+    let old = JSON.stringify(board);
 
-    if (e.key === "ArrowLeft") moved = moveLeft();
-    if (e.key === "ArrowRight") moved = moveRight();
-    if (e.key === "ArrowUp") moved = moveUp();
-    if (e.key === "ArrowDown") moved = moveDown();
+    if (e.key === "ArrowLeft") moveLeft();
+    if (e.key === "ArrowRight") moveRight();
+    if (e.key === "ArrowUp") moveUp();
+    if (e.key === "ArrowDown") moveDown();
 
-    if (moved) {
-        addRandomTile();
-        drawBoard();
+    if (JSON.stringify(board) !== old) {
+    addRandomTile();
+    drawBoard();
 
         if (!hasMoves()) {
             setTimeout(() => {
                 alert("You lost! Try again?");
                 location.reload();
-            }, 150);
+            }, 100);
         }
     }
-});
 
+});
 
 addRandomTile();
 addRandomTile();

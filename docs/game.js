@@ -1,7 +1,7 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
-const TILE_SIZE = 90;
+const TILE_SIZE = 100;
 const TILE_MARGIN = 15;
 const RADIUS = 15;
 

@@ -11,6 +11,14 @@
     margin: 0;
 }
 
+#instructions {
+    font-size: 18px;
+    color: #776E65;
+    text-align: center;
+    flex: 1;
+    margin: 0 20px;
+}
+
 body {
     background: #FAF8EF;
     font-family: Tahoma, sans-serif;

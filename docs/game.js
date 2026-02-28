@@ -128,6 +128,23 @@ function moveDown() {
     }
 }
 
+function hasMoves() {
+    for (let r = 0; r < 4; r++)
+        for (let c = 0; c < 4; c++)
+            if (board[r][c] === 0) return true;
+
+    for (let r = 0; r < 4; r++)
+        for (let c = 0; c < 3; c++)
+            if (board[r][c] === board[r][c+1]) return true;
+
+    for (let c = 0; c < 4; c++)
+        for (let r = 0; r < 3; r++)
+            if (board[r][c] === board[r+1][c]) return true;
+
+    return false;
+}
+
+
 document.addEventListener("keydown", e => {
     let old = JSON.stringify(board);
 
@@ -137,9 +154,17 @@ document.addEventListener("keydown", e => {
     if (e.key === "ArrowDown") moveDown();
 
     if (JSON.stringify(board) !== old) {
-        addRandomTile();
-        drawBoard();
+    addRandomTile();
+    drawBoard();
+    
+        if (!hasMoves()) {
+            setTimeout(() => {
+                alert("You lost! Try again?");
+                location.reload();
+            }, 100);
+        }
     }
+
 });
 
 addRandomTile();

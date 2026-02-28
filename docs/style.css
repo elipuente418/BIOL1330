@@ -35,23 +35,23 @@ body {
 
 #score-box {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 10;
+    top: 10;
     background: #BBADA0;
-    width: 80px;
-    height: 40px;
-    border-radius: 15px;
+    width: 100px;
+    height: 60px;
+    border-radius: 25px;
     text-align: center;
     color: white;
 }
 
 #score-label {
-    font-size: 10px;
+    font-size: 20px;
     margin-top: 5px;
 }
 
 #score-value {
-    font-size: 14px;
+    font-size: 28px;
     font-weight: bold;
 }
 
@@ -62,7 +62,7 @@ body {
 }
 
 #graphicKey {
-    width: 700px;
+    width: 750px;
     height: auto;
     max-width: none;
 }

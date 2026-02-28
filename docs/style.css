@@ -34,7 +34,6 @@ body {
 }
 
 #score-box {
-    position: absolute;
     right: 10;
     top: 10;
     background: #BBADA0;
@@ -62,7 +61,7 @@ body {
 }
 
 #graphicKey {
-    width: 750px;
+    width: 700px;
     height: auto;
     max-width: none;
 }

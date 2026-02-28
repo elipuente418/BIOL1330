@@ -1,0 +1,52 @@
+body {
+    background: #FAF8EF;
+    font-family: Tahoma, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+#game-container {
+    position: relative;
+    width: 700px;
+}
+
+#title {
+    color: #776E65;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+#score-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #BBADA0;
+    width: 80px;
+    height: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+}
+
+#score-label {
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+#score-value {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#gameCanvas {
+    margin-top: 60px;
+    border-radius: 15px;
+    background: #BBADA0;
+}
+
+#graphicKey {
+    position: absolute;
+    right: -200px;
+    top: 0;
+    width: 180px;
+}

@@ -105,27 +105,47 @@ function slide(row) {
 }
 
 function moveLeft() {
-    for (let r=0; r<4; r++) board[r] = slide(board[r]);
+    let changed = false;
+    for (let r = 0; r < 4; r++) {
+        let result = slide(board[r]);
+        board[r] = result.row;
+        if (result.changed) changed = true;
+    }
+    return changed;
 }
 
 function moveRight() {
-    for (let r=0; r<4; r++) board[r] = slide(board[r].reverse()).reverse();
+    let changed = false;
+    for (let r = 0; r < 4; r++) {
+        let reversed = board[r].slice().reverse();
+        let result = slide(reversed);
+        board[r] = result.row.reverse();
+        if (result.changed) changed = true;
+    }
+    return changed;
 }
 
 function moveUp() {
-    for (let c=0; c<4; c++) {
+    let changed = false;
+    for (let c = 0; c < 4; c++) {
         let col = [board[0][c], board[1][c], board[2][c], board[3][c]];
-        col = slide(col);
-        for (let r=0; r<4; r++) board[r][c] = col[r];
+        let result = slide(col);
+        for (let r = 0; r < 4; r++) board[r][c] = result.row[r];
+        if (result.changed) changed = true;
     }
+    return changed;
 }
 
 function moveDown() {
-    for (let c=0; c<4; c++) {
-        let col = [board[0][c], board[1][c], board[2][c], board[3][c]];
-        col = slide(col.reverse()).reverse();
-        for (let r=0; r<4; r++) board[r][c] = col[r];
+    let changed = false;
+    for (let c = 0; c < 4; c++) {
+        let col = [board[0][c], board[1][c], board[2][c], board[3][c]].reverse();
+        let result = slide(col);
+        let newCol = result.row.reverse();
+        for (let r = 0; r < 4; r++) board[r][c] = newCol[r];
+        if (result.changed) changed = true;
     }
+    return changed;
 }
 
 function hasMoves() {
@@ -156,7 +176,7 @@ document.addEventListener("keydown", e => {
     if (JSON.stringify(board) !== old) {
     addRandomTile();
     drawBoard();
-    
+
         if (!hasMoves()) {
             setTimeout(() => {
                 alert("You lost! Try again?");

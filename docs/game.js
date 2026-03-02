@@ -6,18 +6,18 @@ const TILE_MARGIN = 15;
 const RADIUS = 15;
 
 const COLORS = {
-    0: "rgba(238,228,218,0.35)",
-    2: "#EEE4DA",
-    4: "#EDE0C8",
-    8: "#F2B179",
-    16: "#F59563",
-    32: "#F67C5F",
-    64: "#F65E3B",
-    128: "#EDCF72",
-    256: "#EDCC61",
-    512: "#EDC850",
-    1024: "#EDC53F",
-    2048: "#EDC22E"
+    0: "#F5F2ED",
+    2: "#f5f9ff",
+    4: "#e6f2ff",
+    8: "#d6ecff",
+    16: "#cdefe8",
+    32: "#d9f5d6",
+    64: "#eaf8c8",
+    128: "#fff4c2",
+    256: "#ffe8b8",
+    512: "#ffd9a8",
+    1024: "#ffc89c",
+    2048: "#ffbfa3"
 };
 
 const IMAGES = {

@@ -145,6 +145,8 @@ function hasMoves() {
 }
 
 
+
+
 document.addEventListener("keydown", e => {
     let old = JSON.stringify(board);
 
